@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 0.4
+- Java 21
+- MQTT host updated
+
 ## 0.3 beta2
 - Update kwh to kWh. It's required to manualy fix statistics for devi kwh sensors here http://homeassistant/developer-tools/statistics
   
