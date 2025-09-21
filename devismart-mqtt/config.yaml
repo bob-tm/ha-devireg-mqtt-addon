@@ -18,7 +18,7 @@ services:
 map:
   - addon_config:rw
 options:
-  host: localhost
+  host: core-mosquitto
   port: 1883
   user: ""
   password: ""
