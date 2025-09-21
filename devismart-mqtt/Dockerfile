@@ -1,6 +1,6 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM AS build
-ARG JAVA_VERSION=17
+ARG JAVA_VERSION=21
 
 LABEL org.opencontainers.image.description="$(cat README.md)"
 
@@ -26,9 +26,9 @@ RUN mv ./ha-devi-mqtt/src ./src
 RUN mv ./ha-devi-mqtt/pom.xml ./pom.xml
 RUN mv ./ha-devi-mqtt/auto-discovery-templates  ./auto-discovery-templates
 
-# change Java version to 17
-RUN xmlstarlet ed --inplace -N pom=http://maven.apache.org/POM/4.0.0 -u "/pom:project/pom:properties/pom:maven.compiler.source" --value "17" ./pom.xml
-RUN xmlstarlet ed --inplace -N pom=http://maven.apache.org/POM/4.0.0 -u "/pom:project/pom:properties/pom:maven.compiler.target" --value "17" ./pom.xml
+# change Java version to 17 (21 in latest versions)
+RUN xmlstarlet ed --inplace -N pom=http://maven.apache.org/POM/4.0.0 -u "/pom:project/pom:properties/pom:maven.compiler.source" --value "21" ./pom.xml
+RUN xmlstarlet ed --inplace -N pom=http://maven.apache.org/POM/4.0.0 -u "/pom:project/pom:properties/pom:maven.compiler.target" --value "21" ./pom.xml
 
 # download dependencies
 RUN mvn dependency:go-offline
@@ -38,7 +38,7 @@ RUN mvn clean package -DskipTests
 
 # Stage 2: Create the final image to run the application
 FROM $BUILD_FROM
-ARG JAVA_VERSION=17
+ARG JAVA_VERSION=21
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
