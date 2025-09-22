@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Devismart MQTT
-version: "0.4"
+version: "0.4.1"
 slug: devismart-mqtt
 description: Devismart MQTT Addon
 url: "https://github.com/bob-tm/ha-devireg-mqtt-addon/"
