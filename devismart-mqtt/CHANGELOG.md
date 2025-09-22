@@ -1,5 +1,7 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
-
+## 0.4.1
+- Update temperature units to °C
+  
 ## 0.4
 - Java 21
 - MQTT host updated
