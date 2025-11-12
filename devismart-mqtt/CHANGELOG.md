@@ -1,4 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
+## 0.4.2
+- HA 2026 warnigns
+- HVAC action idle / heating
+- HVAC modes off / auto / heat
+
 ## 0.4.1
 - Update temperature units to °C
   
