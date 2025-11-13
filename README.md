@@ -31,3 +31,17 @@ Tested on RPI4
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
+
+
+# Manual Template Editing
+You can override default template sensors for you confg. For example cahnge climate presets, logic or simply rename sensors.
+
+copy folder ```auto-discovery-templates``` 
+
+from https://github.com/bob-tm/ha-devi-mqtt
+
+to ```\\192.168.xxx.x\addon_configs\xxxxxx_devismart-mqtt\auto-discovery-templates```
+
+than you can direcly edit json files inside this folder. Local ```auto-discovery-templates``` has more priority over build in addon. It will survive addon updates. 
+
+To apply changes just restart Devismart MQTT addon
