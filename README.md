@@ -1,3 +1,15 @@
+# Repository is Moved!
+New versions will be here: https://github.com/bob-tm/ha-apps/tree/main
+
+App switched to prebuild images.
+
+to upgrade
+1. Install new version from https://github.com/bob-tm/ha-apps/tree/main
+2. Stop old version
+3. Rename or copy addon config folder from \\192.168.x.x\addon_configs\old_app_id_devismart-mqtt to \\192.168.x.x\addon_configs\new_app_id_devismart-mqtt
+4. Start new App. Check tht it works. 
+5. Delete old Addon and old repository 
+ 
 # Auto Repository installation
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/bob-tm/ha-devireg-mqtt-addon)
